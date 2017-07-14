@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/* * {color:red} */
+/* div>span {color:red}  */
+/*  div span{color:red} */
+
+/* .test > li {color:orange} */
+/* #aa + li{color:green} */
+#aa ~ li{color:green}

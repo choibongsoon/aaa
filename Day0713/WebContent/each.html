@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./js/jquery-3.2.1.js"></script>
+<script>
+$(function() {
+
+	/* var a=["홍길동",2,3,4]; */
+	var a = [{num:1,name:"홍길동"},{num:2,name:"유재석"}]/* 객체형 배열, 이걸 JSON 이라고 함.*/
+	/* console.log(a.length); */
+	
+/* 	for(var i=0;i<a.length;i++){
+		console.log(a[i]);
+	} */
+	/* $.each(a,function(index, item){
+ 		console.log(item.name); 
+		$("span").append(item.name);
+	}); */
+	
+	$("li").each(function(i,v){
+		console.log(v.innerHTML);
+		console.log($(v));
+	});
+	
+});
+
+</script>
+</head>
+<body>
+	<span></span>
+	
+	<ul>
+		<li>1</li>
+		<li>2
+		<li>3
+		<li>4		
+	</ul>
+</body>
+</html>

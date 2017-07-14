@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./js/jquery-3.2.1.js"></script>
+<script>
+
+/* 	jQuery(document).ready(function(){
+		alert("");} */
+	$(function(){
+		/* alert("시작") */;/* 완성된걸 알려주는 신호. */
+		
+		/* $("#button").on("click",function(){ 
+			alert("버튼클릭");
+		}); */
+		
+		$("#button").click(function(){
+			/* $("#txt").val("버튼내용") */
+			//alert($("#txt").val());
+			/* $("#chk").text($("#txt").val()); 태그 적용 불가능!*/
+			/* $("#chk").html("<h1>"+$("#txt").val()+"</h1>"); */
+			
+/* 			console.log($(this).parent());
+			console.log($(this).prev()); */
+			//console.log($(this).prev().next());
+			/* $(this).prev().css("color","red"); */
+			var a = $("#txt").val();
+			var b = $("#txt2").val();
+			console.log(a-b);
+			$(this).next().html(a-b);
+			
+		});
+		
+		
+		
+	});		
+/* ); */
+</script>
+<style>
+	#txt{
+		color:green;
+	}
+</style>
+</head>
+<body>
+	<input type="text" id="txt"><!-- <span id="chk">aaaaa</span> -->
+	<input type="text" id="txt2">
+	<input type="button" id="button"value="연습"><span></span>
+	<div>div</div>
+</body>
+</html>

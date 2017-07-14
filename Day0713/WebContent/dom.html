@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./js/jquery-3.2.1.js"></script>
+<script>
+	$(function() {
+		/* 		alert(); */
+		$("#btn").click(function() {
+			//			$("div").html("<h1>"+$("#btn").val()+"</h1>");
+			//		$("div").append("<h1>"+$("#btn").val()+"</h1>");
+			/* 			$("div").prepend("<h1>"+$("#btn").val()+"</h1>"); */
+			//$("<h1>"+"appendTo()"+"</h1>").appendTo($("div"));
+			//$("<h1>"+"prependTo()"+"</h1>").prependTo($("div"));
+			/* 			$("div").before("<h1>"+"before()"+"</h1>");
+			 $("div").after("<h1>"+"after()"+"</h1>"); */
+
+		/* 	$("div").find($("ol")).append("<li>ul자식");
+			$("div").find($("ol")).after("ul형제"); */
+			//			$("ol>li").css("display","inline")
+			/* $("#btn").parent().append($("[type='text']").val()); */
+			$("#btn").after("<p>"+$("[type='text']").val()+"</p>");
+		});
+
+	});
+</script>
+</head>
+<body>
+	<div>
+		<ul>
+		</ul>
+		<ol>
+		</ol>
+	</div>
+	<input type="text">
+	<input type="button" id="btn" value="DOM 테스트">
+
+</body>
+</html>

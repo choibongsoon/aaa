@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./js/jquery-3.2.1.js"></script>
+<script>
+	$(function() {
+/* 		$("#img").mouseover(function() {
+			$("#img").attr("src","./image/k2.jpg");
+		}).mouseout(function() {
+			$("#img").attr("src","./image/k1.jpg");
+		}); */
+		
+/* 		jQuery("#img").on("mouseover",function(){
+			jQuery("#img").attr("src","./image/k2.jpg");
+		}).on("mouseout",function(){
+			jQuery("#img").attr("src","./image/k1.jpg");
+		}); */
+		
+		jQuery("#img").on({mouseover:function(){
+			jQuery("#img").attr("src","./image/k2.jpg");
+		},mouseout:function(){
+			$("img").attr("src","./image/k1.jpg");
+		}});/* 같은 객체에 여러 이벤트를 정의할때 쓰이는 방법. 이벤트를 객체로 생성해서 씀. 이름을 이벤트명, 값을 익명함수로 */
+		
+		$("#all").click(function(){
+			console.log($("#all").prop("checked"));/* attr은 html로 인식. prop는 jquery로 인식. checked는 prop로 인식됨. */
+			$("[type='checkbox']").prop("checked",$("#all").prop("checked"));
+		});
+		
+		
+	});
+</script>
+</head>
+<body>
+	<img id="img" src="./image/k1.jpg">
+	<input type="checkbox" id="all"> 모두선택
+	
+	<input type="checkbox" value="1">1번
+	<input type="checkbox" value="2">2번
+	<input type="checkbox" value="3">3번
+	
+</body>
+</html>

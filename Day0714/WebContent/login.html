@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#box {
+	border-color: green;
+	border-style: dashed;
+	color: gray;
+}
+</style>
+
+<script src="./js/jquery-3.2.1.js"></script>
+<script>
+
+	$(function(){
+		$("#form1").submit(function(e){			
+			var id = $("#id1").val();
+			var pw = $("#pw1").val();
+			if(id==""){
+				alert("아이디를 입혁");
+				e.preventDefault();
+				$("#id1").focus();
+			}
+			else if(pw==""){
+				alert("비번 입력해라");
+				e.preventDefault();
+				$("#pw1").focus();
+			}
+		});
+		
+		
+		
+	});
+	
+
+
+</script>
+</head>
+<body>
+	<fieldset><!-- 꼭 섭밋 버튼을 누를때는 폼에 이벤트를 주고 submit 이벤트를 줘야함. -->
+		Servlet 확인
+		<form action="LoginServlet" method="post" id="form1">
+			<ul>
+				<li>id<input class="id" type="text" name="id" id="id1">
+				<li>pw<input class="pw" type="password" name="pw" id="pw1">
+			</ul>
+			<input type="submit" value="로그인">
+		</form>
+	</fieldset>
+	<fieldset id="box">
+		jsp 확인
+		<form action="login.jsp" method="post">
+			<ul>
+				<li>id<input class="id" type="text" name="id">
+				<li>pw<input class="pw" type="password" name="pw">
+			</ul>
+			<input type="submit" value="로그인">
+		</form>
+	</fieldset>
+</body>
+</html>

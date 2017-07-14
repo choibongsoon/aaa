@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="./js/jquery-3.2.1.js"></script>
+<script>
+	$(document).ready(function() {
+		/* alert("2323"); */
+		/* $("*").css("color","red"); */
+		$("#test").css("color","red");
+		
+		$("[type='text']")
+			.css("border-style","solid")
+			.css("border-style","dashed");/* 이렇게도 표현가능. */
+		/* jQuery("[type='password']").css("border-style","dashed"); */
+		
+/* 		$("ol > li").eq(1).css("color","red");
+		$("ol > li").first().css("color","green");
+		$("ol > li").last().css("color","gold");
+		$("ol > li").parent().parent().find("p").css("color","blue"); */
+		/* jQuery("ol >li:odd").css("color", "red"); 정적으로 처리될때*/
+		jQuery("ol>li").filter(":even").css("color", "red"); /* 동적으로 처리할때. 메소드로씀.*/
+		/* find는 후손. filter는 선택레벨에서 걸러냄. */
+		
+	});
+	
+</script>
+</head>
+<body>
+	<h1>안녕하세요</h1>
+	<h1 id="test">안녕하세요</h1>
+	<p>안녕하세요</p>
+	
+	<input type="text">
+	<input type="password">
+	<ul>
+		<li> 피자
+		<li> 파스타
+	</ul>
+	
+	<ol>
+		<li> 피자
+		<li> 파스타
+		<li> 햄버거
+	</ol>
+</body>
+</html>
